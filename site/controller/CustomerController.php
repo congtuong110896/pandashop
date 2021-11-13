@@ -87,13 +87,13 @@ class CustomerController {
 		require "view/customer/orders.php";
 	}
 
-	// function orderDetail() {
-    //     $this->checkLogin();
-	// 	$orderRepository = new OrderRepository();
-	// 	$id = $_GET["id"];
-	// 	$order = $orderRepository->find($id);
-	// 	require "view/customer/orderDetail.php";
-	// }
+	function orderDetail() {
+        $this->checkLogin();
+		$orderRepository = new OrderRepository();
+		$id = $_GET["id"];
+		$order = $orderRepository->find($id);
+		require "view/customer/orderDetail.php";
+	}
     
 	function notExistingEmail() {
         $email = $_GET["email"];

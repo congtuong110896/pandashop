@@ -13,7 +13,7 @@
             <?php require 'view/customer/sidebar.php' ?>
             <div class="col-md-9 account">
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-6">  
                         <h4 class="home-title">Địa chỉ giao hàng mặc định</h4>
                     </div>
                     <div class="clearfix"></div>
