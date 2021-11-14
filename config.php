@@ -16,4 +16,12 @@ define("GOOGLE_RECAPTCHA_SECRET", "6Lf2KRQdAAAAALPZezu8wOA9ChTp4HdJFw_QafG0");
 define("JWT_KEY", "godashop-key");
 
 define('ITEM_PER_PAGE','10');
+// login google
+define("GOOGLE_CLIENT_ID", "478037370502-rq8vb9k586e6op8ip2qnp4brvufqgbef.apps.googleusercontent.com");
+define("GOOGLE_CLIENT_SECRET", "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");
+//login facebooks
+define("FACEBOOK_CLIENT_ID", "3103715026548293");
+define("FACEBOOK_CLIENT_SECRET", "fd65fd53da93d948ef2aaef6f1ad2ea7");
+
+
 ?>

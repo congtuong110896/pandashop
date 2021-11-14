@@ -114,35 +114,65 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3 class="modal-title text-center">Đăng nhập</h3>
                 <!-- Google login -->
-               
+                <?php
+
+                // init configuration
+                $clientID = GOOGLE_CLIENT_ID;
+                $clientSecret = GOOGLE_CLIENT_SECRET;
+                $redirectUri =  get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginGoogle";
+
+                // create Client Request to access Google API
+                $client = new Google_Client();
+                $client->setClientId($clientID);
+                $client->setClientSecret($clientSecret);
+                $client->setRedirectUri($redirectUri);
+                $client->addScope("email");
+                $client->addScope("profile");
+                $loginUrl = $client->createAuthUrl();
+                //   echo $loginUrl;                  
+                ?>
                 <br>
                 <div class="text-center">
-                    <a class="btn btn-primary google-login" href=""><i class="fab fa-google"></i></i> Đăng nhập bằng Google</a>
+                    <a class="btn btn-primary google-login" href="<?= $loginUrl ?>"><i class="fab fa-google"></i></i> Đăng nhập bằng Google</a>
                     <!-- Facebook login -->
-                
-                    <a class="btn btn-primary facebook-login" href=""><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
+                    <?php
+                    $fb = new Facebook\Facebook([
+                        'app_id' => FACEBOOK_CLIENT_ID, // Replace {app-id} with your app id
+                        'app_secret' => FACEBOOK_CLIENT_SECRET,
+                        'default_graph_version' => 'v3.2',
+                    ]);
+
+                    $helper = $fb->getRedirectLoginHelper();
+
+                    $permissions = ['email']; // Optional permissions
+                    $callback = get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginFacebook";
+                    $loginUrl = $helper->getLoginUrl($callback, $permissions);
+                    // echo $loginUrl; 
+                    ?>
+                    <a class="btn btn-primary facebook-login" href="<?= $loginUrl ?>"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
                 </div>
             </div>
-            <form action="?c=login&a=login" method="POST" role="form">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
-                    </div>
-                    <input type="hidden" name="reference" value="">
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
-                    <div class="text-left">
-                        <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
-                        <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
-                    </div>
-                </div>
-            </form>
+   
+    <form action="?c=login&a=login" method="POST" role="form">
+        <div class="modal-body">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
+            </div>
+            <input type="hidden" name="reference" value="">
         </div>
-    </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
+            <div class="text-left">
+                <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
+                <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
 </div>
 <!-- END LOGIN DIALOG -->
 <!-- FORTGOT PASSWORD DIALOG -->
@@ -205,7 +235,7 @@
                         </div>
                     </div>
                     <div class="cart-product">
-                                        
+
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
                     <a href="?c=customer&a=defaultShipping" title="Địa chỉ giao hàng mặc định" target="_self">Địa chỉ giao hàng mặc định
                     </a>
                 </li>
-                <li class="<?= $a == 'orders' ? 'active' : '' ?>">
+                <li class="<?=in_array($a,['order','orderDetail']) ? 'active' : '' ?>">
                     <a href="?c=customer&a=orders" target="_self">Đơn hàng của tôi
                     </a>
                 </li>
