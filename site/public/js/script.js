@@ -1,11 +1,11 @@
 function openMenuMobile() {
   $(".menu-mb").width("250px");
-  $(".btn-menu-mb").hide("slow");
+  $(".btn-menu-mb").hide();
 }
 
 function closeMenuMobile() {
   $(".menu-mb").width(0);
-  $(".btn-menu-mb").show("slow");
+  $(".btn-menu-mb").show();
 }
 
 $(function () {

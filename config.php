@@ -17,11 +17,11 @@ define("JWT_KEY", "godashop-key");
 
 define('ITEM_PER_PAGE','10');
 // login google
-define("GOOGLE_CLIENT_ID", "478037370502-rq8vb9k586e6op8ip2qnp4brvufqgbef.apps.googleusercontent.com");
-define("GOOGLE_CLIENT_SECRET", "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");
+define("GOOGLE_CLIENT_ID", "145751660791-q0qhvj98k14h09lcjoba51m0a3vgja1k.apps.googleusercontent.com");
+define("GOOGLE_CLIENT_SECRET", "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");
 //login facebooks
-define("FACEBOOK_CLIENT_ID", "3103715026548293");
-define("FACEBOOK_CLIENT_SECRET", "fd65fd53da93d948ef2aaef6f1ad2ea7");
+define("FACEBOOK_CLIENT_ID", "618317682545308");
+define("FACEBOOK_CLIENT_SECRET", "66e9d5b4182fbab75a227bbd5d1745de");
 
 
 ?>

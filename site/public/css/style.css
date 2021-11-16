@@ -41,7 +41,7 @@ header .top-navbar .btn-menu-mb {
 }
 
 header .menu-mb {
-    height: 100%;
+    height: 40%;
     width: 0;
     position: fixed;
     z-index: 100;
@@ -84,6 +84,9 @@ header .list-inline {
     padding-left: 0;
     margin-left: -5px;
     list-style: none;
+}
+header .img-responsive {
+  margin: auto;
 }
 
 /*TOP HEADER*/
@@ -174,13 +177,14 @@ header form.header-form {
 
 /*Destop menu*/
 nav.desktop-menu {
-    background-color: #ec0000;
+    background-color: orangered;
     border: none;
     border-radius: 0;
     position: sticky;
     top:0;
     left:0;
     z-index: 1000;
+    height: 45px;
    
 }
 
@@ -191,7 +195,7 @@ nav.desktop-menu .fa-shopping-cart {
 nav.desktop-menu .navbar-nav > li > a {
     color: #ffffff;
     font-weight: bold;
-    
+ 
 }
 
 nav.desktop-menu .navbar-nav > li > a:hover, nav.desktop-menu .navbar-nav > li > a:focus {
@@ -201,7 +205,7 @@ nav.desktop-menu .navbar-nav > li > a:hover, nav.desktop-menu .navbar-nav > li >
 nav.desktop-menu .experience {
     color: #ffffff;
     display: inline-block;
-    line-height: 35px;
+    line-height: 40px;
 }
 
 nav.desktop-menu .navbar-right li {
@@ -230,6 +234,7 @@ nav.desktop-menu {
     border-style: solid;
     border-color: rgb(242, 242, 242);
     border-image: initial;
+    margin-bottom: 8px;
 }
 
 .top-services .item-inner:hover {
@@ -242,7 +247,7 @@ nav.desktop-menu {
 }
 
 .top-services .item-inner .item-inline {
-    padding-left: 40px;
+    padding-left: 48px;
     display: inline-block;
     text-align: left;
     position: relative;
@@ -265,7 +270,7 @@ nav.desktop-menu {
     display: inline-block;
     font-family: "Font Awesome 5 Free";
     line-height: 1;
-    font-size: 36px;
+    font-size: 30px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -277,7 +282,7 @@ nav.desktop-menu {
     
 }
 .top-services .item-2 .item-inline::before {
-    content: "";
+    content: "\f48b";
     
 }
 .top-services .item-3 .item-inline::before {
@@ -751,7 +756,12 @@ main .product-detail .product-related .owl-next {
 }
 
 @media (max-width: 990px){
-
+    nav.desktop-menu .navbar-nav > li > a {
+        height: 45px;
+    }
+    nav.desktop-menu .experience {
+        line-height: 45px;
+    }
     .desktop-menu {
         margin-top: 10px;
         min-height: 30px;
@@ -776,7 +786,15 @@ main .product-detail .product-related .owl-next {
         width:100%;
     }
 }
+@media (max-width: 767px){
+    nav.desktop-menu .fa-shopping-cart {
+        margin-top: 5px;
+    }
+    .img-responsive {
+        margin-bottom: 10px;
+    }
 
+}
 
 
 /*END*/

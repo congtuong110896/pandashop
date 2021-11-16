@@ -39,19 +39,19 @@
                 <a class="<?= $a == 'form' ? 'active' : '' ?>" href="?c=contact&a=form">Liên hệ</a>
             </div>
             <div class="row">
-                <div class="hidden-lg hidden-md col-sm-2 col-xs-1">
+                <div class="hidden-lg hidden-md col-sm-2 col-xs-2">
                     <span class="btn-menu-mb" onclick="openMenuMobile()"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
                 </div>
                 <div class="col-md-6 hidden-sm hidden-xs">
                     <ul class="list-inline">
-                        <li><a href="https://www.facebook.com/HocLapTrinhWebTaiNha.ThayLoc"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a></li>
                         <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-6 col-sm-10 col-xs-11">
+                <div class="col-md-6 col-sm-10 col-xs-10 pull-right">
                     <ul class="list-inline pull-right top-right">
                         <li class="account-login">
                             <?php if (empty($_SESSION['email'])) : ?>
@@ -84,16 +84,16 @@
             <div class="row">
                 <!-- LOGO -->
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 logo">
-                    <a href="#"><img src="../upload/goda450x170_1.jpg" class="img-responsive"></a>
+                    <a href="/"><img src="../upload/pandalogo.jfif" class="img-responsive"></a>
                 </div>
                 <div class="col-lg-4 col-md-4 hidden-sm hidden-xs call-action">
-                    <a href="#"><img src="../upload/godakeben450x170.jpg" class="img-responsive"></a>
+                    <a href="#"><img src="../upload/pandalogo2.png" class="img-responsive"></a>
                 </div>
                 <!-- HOTLINE AND SERCH -->
                 <div class="col-lg-4 col-md-4 hotline-search">
                     <div>
-                        <p class="hotline-phone"><span><strong>Hotline: </strong><a href="tel:0932.538.468">0932.538.468</a></span></p>
-                        <p class="hotline-email"><span><strong>Email: </strong><a href="mailto:nguyenhuulocla2006@gmail.com">nguyenhuulocla2006@gmail.com</a></span></p>
+                        <p class="hotline-phone"><span><strong>Hotline: </strong><a href="tel:0932.538.468">0356.230.546</a></span></p>
+                        <p class="hotline-email"><span><strong>Email: </strong><a href="mailto:tuongnguyen0896@gmail.com">tuongnguyen0896@gmail.com</a></span></p>
                     </div>
                     <form class="header-form" action="" method="GET">
                         <div class="input-group">
