@@ -10,8 +10,8 @@ define("SMTP_SECRET", "vyjmepjbsrhfcxdo"); //
 define("SMTP_HOST", "smtp.gmail.com");
 define("SHOP_OWNER", "tuongnguyen0896@gmail.com");
 
-define("GOOGLE_RECAPTCHA_SITE", "6Lf2KRQdAAAAAFvoxUpgC8lLZAI1Jgas5uqCg_mZ");
-define("GOOGLE_RECAPTCHA_SECRET", "6Lf2KRQdAAAAALPZezu8wOA9ChTp4HdJFw_QafG0");
+define("GOOGLE_RECAPTCHA_SITE", "6Le-NewcAAAAAB8oOt9tYN40_5i5_ZRto5774Jdr");
+define("GOOGLE_RECAPTCHA_SECRET", "6Le-NewcAAAAADCZwT7im3_PzAdPFaBC8QHFfcex");
 
 define("JWT_KEY", "godashop-key");
 

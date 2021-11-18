@@ -1,6 +1,6 @@
 <?php require 'layout/header.php' ?>
 <main id="maincontent" class="page-main">
-            <div class="container">
+            <div class="container mb">
                 <div class="row">
                     <div class="col-xs-9">
                         <ol class="breadcrumb">

@@ -360,12 +360,28 @@ main .row .product-item-discount {
 main  #product-description {
     margin-top:20px;
 }
+.account {
+    margin-bottom: 90px;
+}
+.mb {
+    margin-bottom: 6px;
+}
+footer .newsletter .input-group .send {
+    height: 35px;
+    margin-top: 0!important;
+    border-radius: 3px!important;
+   outline: none;
+}
 
 footer {
     background-color: #1F2022;
     color: #ffffff;
+    padding-bottom: 10px;
 }
 
+footer .container{
+  
+}
 footer a, footer a:hover {
     color: #ffffff;
 
@@ -388,7 +404,7 @@ footer .newsletter .send {
 }
 
 footer .newsletter .send:hover {
-    background-color: #25AEF5;
+    opacity: 0.8;
 }
 
 
@@ -793,8 +809,9 @@ main .product-detail .product-related .owl-next {
     .img-responsive {
         margin-bottom: 10px;
     }
-
+   
 }
+
 
 
 /*END*/

@@ -1,6 +1,6 @@
 <footer class="container-fluid">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-4 list">
@@ -50,18 +50,23 @@
                         <div class="newsletter clearfix">
                             <h4>Bản tin</h4>
                             <p>Nhập Email của bạn để chúng tôi cung cấp thông tin nhanh nhất cho bạn về những sản phẩm mới!!</p>
-                            <form class="newsletter-form" action="" method="POST">
+                            <form class="newsletter-form" action="#" method="POST">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Nhập email của bạn.." name="email">
+                                    <div class="input-group-btn">
 
+                                        <button type="submit" class="btn btn-primary send">Gửi</button>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary send pull-right">Gửi</button>
-                            </form>
+
+
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </footer>
 <!-- END FOOTER -->
@@ -152,27 +157,27 @@
                     <a class="btn btn-primary facebook-login" href="<?= $loginUrl ?>"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
                 </div>
             </div>
-   
-    <form action="?c=login&a=login" method="POST" role="form">
-        <div class="modal-body">
-            <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
-            </div>
-            <input type="hidden" name="reference" value="">
+
+            <form action="?c=login&a=login" method="POST" role="form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
+                    </div>
+                    <input type="hidden" name="reference" value="">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
+                    <div class="text-left">
+                        <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
+                        <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
-            <div class="text-left">
-                <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
-                <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
-            </div>
-        </div>
-    </form>
-</div>
-</div>
+    </div>
 </div>
 <!-- END LOGIN DIALOG -->
 <!-- FORTGOT PASSWORD DIALOG -->
