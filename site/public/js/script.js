@@ -9,6 +9,24 @@ function closeMenuMobile() {
 }
 
 $(function () {
+  $(window).scroll(function(event) {
+    /* Act on the event */
+    //top của window so với top của document
+    console.log($(window).scrollTop());
+    //top của portfolio so với top của document
+    console.log($("nav").offset().top);
+  
+    //Nếu top của window lớn hơn top của portfolio thì xuất hiện fixed menu
+    //ngược lại thì không xuất hiện fixed menu
+    if ($(window).scrollTop() >= $("#myCarousel").offset().top - 1) {
+      $("nav").addClass('fixed-top');
+      $("header").addClass('dummy');
+    }
+    else {
+      $("nav").removeClass('fixed-top');
+      $("header").removeClass('dummy');
+    }
+  });
   // Thay đổi province
   $("main .province").change(function (event) {
     
@@ -263,6 +281,7 @@ $(function () {
         }).done(function (data) {
           $(".search-result").html(data);
           $(".search-result").show();
+          
         });
       }
     }, 500);

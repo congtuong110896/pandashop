@@ -1,6 +1,6 @@
 <footer class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 ">
+        <div class="col-xs-12">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-4 list">
@@ -34,8 +34,8 @@
                         <div class="footerLink">
                             <h4>Liên hệ với chúng tôi </h4>
                             <ul class="list-unstyled">
-                                <li>Phone: 0932.538.468</li>
-                                <li><a href="mailto:nguyenhuulocla2006@gmail.com">Mail: nguyenhuulocla2006@gmail.com</a></li>
+                                <li>Phone: 0356.230.546</li>
+                                <li><a href="mailto:tuongnguyen0896@gmail.com">Mail: tuongnguyen0896@gmail.com</a></li>
                             </ul>
                             <ul class="list-inline">
                                 <li><a href="https://www.facebook.com/HocLapTrinhWebTaiNha.ThayLoc"><i class="fab fa-facebook-f"></i></a></li>
@@ -50,23 +50,21 @@
                         <div class="newsletter clearfix">
                             <h4>Bản tin</h4>
                             <p>Nhập Email của bạn để chúng tôi cung cấp thông tin nhanh nhất cho bạn về những sản phẩm mới!!</p>
-                            <form class="newsletter-form" action="#" method="POST">
-                                <div class="input-group">
+                            <form class="newsletter-form" action="" method="POST">
+                                     <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Nhập email của bạn.." name="email">
                                     <div class="input-group-btn">
 
                                         <button type="submit" class="btn btn-primary send">Gửi</button>
                                     </div>
                                 </div>
-
-
                         </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </footer>
 <!-- END FOOTER -->
@@ -121,20 +119,20 @@
                 <!-- Google login -->
                 <?php
 
-                // init configuration
-                $clientID = GOOGLE_CLIENT_ID;
-                $clientSecret = GOOGLE_CLIENT_SECRET;
-                $redirectUri =  get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginGoogle";
+                // // init configuration
+                // $clientID = GOOGLE_CLIENT_ID;
+                // $clientSecret = GOOGLE_CLIENT_SECRET;
+                // $redirectUri =  get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginGoogle";
 
-                // create Client Request to access Google API
-                $client = new Google_Client();
-                $client->setClientId($clientID);
-                $client->setClientSecret($clientSecret);
-                $client->setRedirectUri($redirectUri);
-                $client->addScope("email");
-                $client->addScope("profile");
-                $loginUrl = $client->createAuthUrl();
-                //   echo $loginUrl;                  
+                // // create Client Request to access Google API
+                // $client = new Google_Client();
+                // $client->setClientId($clientID);
+                // $client->setClientSecret($clientSecret);
+                // $client->setRedirectUri($redirectUri);
+                // $client->addScope("email");
+                // $client->addScope("profile");
+                // $loginUrl = $client->createAuthUrl();
+                // //   echo $loginUrl;                  
                 ?>
                 <br>
                 <div class="text-center">
@@ -157,27 +155,27 @@
                     <a class="btn btn-primary facebook-login" href="<?= $loginUrl ?>"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
                 </div>
             </div>
-
-            <form action="?c=login&a=login" method="POST" role="form">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
-                    </div>
-                    <input type="hidden" name="reference" value="">
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
-                    <div class="text-left">
-                        <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
-                        <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
-                    </div>
-                </div>
-            </form>
+   
+    <form action="?c=login&a=login" method="POST" role="form">
+        <div class="modal-body">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
+            </div>
+            <input type="hidden" name="reference" value="">
         </div>
-    </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button><br>
+            <div class="text-left">
+                <a href="javascript:void(0)" class="btn-register">Bạn chưa là thành viên? Đăng kí ngay!</a>
+                <a href="javascript:void(0)" class="btn-forgot-password">Quên Mật Khẩu?</a>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
 </div>
 <!-- END LOGIN DIALOG -->
 <!-- FORTGOT PASSWORD DIALOG -->
@@ -281,10 +279,11 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 <!-- Your customer chat code -->
-<div class="fb-customerchat" attribution=setup_tool page_id="112296576811987" logged_in_greeting="Chào bạn, bạn muốn mua sản phẩm nào bên GodaShop.com" logged_out_greeting="Chào bạn, bạn muốn mua sản phẩm nào bên GodaShop.com">
+<div class="fb-customerchat" attribution=setup_tool page_id="112296576811987" logged_in_greeting="Chào bạn, bạn muốn mua sản phẩm nào bên PandaShop.com" logged_out_greeting="Chào bạn, bạn muốn mua sản phẩm nào bên GodaShop.com">
 </div>
 <!-- End Facebook Messenger Chat -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </body>
 
 </html>
