@@ -26,6 +26,7 @@ class ContactController {
         helllo các bạn<br>
         Sent from: $site
         ";
+        
         $mailService->send($to, $subject, $content);
     }
 }

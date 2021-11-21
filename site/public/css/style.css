@@ -24,6 +24,7 @@ header .top-navbar ul li a{
 header .top-navbar ul.dropdown-menu li{
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 
 header .top-navbar ul.dropdown-menu a{
@@ -366,22 +367,17 @@ main  #product-description {
 .mb {
     margin-bottom: 6px;
 }
-footer .newsletter .input-group .send {
-    height: 35px;
-    margin-top: 0!important;
-    border-radius: 3px!important;
-   outline: none;
-}
+
 
 footer {
     background-color: #1F2022;
     color: #ffffff;
-    padding-bottom: 10px;
+    padding-bottom: 10px;  
+    bottom: 0;
+    width: 100%;
 }
 
-footer .container{
-  
-}
+
 footer a, footer a:hover {
     color: #ffffff;
 
@@ -399,8 +395,10 @@ footer .newsletter .send {
     background-color: #ec0000;
     text-transform: uppercase;
     color: #ffffff;
-    border-radius:0;
-    margin-top:5px;
+    border-radius:3px;
+    margin-top:0;
+    height: 35px;
+    outline: none;
 }
 
 footer .newsletter .send:hover {
@@ -808,9 +806,11 @@ main .product-detail .product-related .owl-next {
     }
     .img-responsive {
         margin-bottom: 10px;
+        
     }
    
 }
+
 
 
 

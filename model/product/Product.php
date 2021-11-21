@@ -1,138 +1,219 @@
-<?php
-class Product
-{
-    public $id;
-    public $barcode;
-    public $sku;
-    public $name;
-    public $price;
-    public $discount_percentage;
-    public $discount_from_date;
-    public $discount_to_date;
-    public $featured_image;
-    public $inventory_qty;
-    public $category_id;
-    public $brand_id;
-    public $created_date;
-    public $description;
-    public $start;
-    public $feature;
-    public $sale_price;
-    function __construct($id, $barcode, $sku, $name, $price, $discount_percentage, $discount_from_date, $discount_to_date, $featured_image, $inventory_qty, $category_id, $brand_id, $created_date, $description, $star, $featured, $sale_price)
-    {
-        $this->id = $id;
-        $this->barcode = $barcode;
-        $this->sku = $sku;
-        $this->name = $name;
-        $this->price = $price;
-        $this->discount_percentage = $discount_percentage;
-        $this->discount_from_date = $discount_from_date;
-        $this->discount_to_date = $discount_to_date;
-        $this->featured_image = $featured_image;
-        $this->inventory_qty = $inventory_qty;
-        $this->category_id = $category_id;
-        $this->brand_id = $brand_id;
-        $this->created_date = $created_date;
-        $this->description = $description;
-        $this->star = $star;
-        $this->featured = $featured;
-        $this->sale_price = $sale_price;
-    }
-    function getId()
-    {
-        return $this->id;
-    }
+<?php 
+class Product {
+	protected $id;
+	protected $name;
+	protected $barcode;
+	protected $sku;
+	protected $price;
+	protected $discount_percentage;
+	protected $discount_from_date;
+	protected $discount_to_date;
+	protected $sale_price;
+	protected $featured_image;
+	protected $inventory_qty;
+	protected $created_date;
+	protected $description;
+	protected $star;
+	protected $featured;
+	protected $category_id;
+	protected $brand_id;
 
-    function getName()
-    {
-        return $this->name;
-    }
+	function __construct($id, $name, $barcode, $sku,
+		$price, $discount_percentage, $discount_from_date, 
+		$discount_to_date, $sale_price,  $featured_image, 
+		$inventory_qty, $created_date, $description, 
+		$star, $featured, $category_id, $brand_id){
 
-    function getBarcode()
-    {
-        return $this->barcode;
-    }
+		$this->id = $id;
+		$this->name = $name;
+		$this->barcode = $barcode;
+		$this->sku = $sku;
+		$this->price = $price;
+		$this->discount_percentage = $discount_percentage;
+		$this->discount_from_date = $discount_from_date;
+		$this->discount_to_date = $discount_to_date;
+		$this->sale_price = $sale_price;
+		$this->featured_image = $featured_image;
+		$this->inventory_qty = $inventory_qty;
+		$this->created_date = $created_date;
+		$this->description = $description;
+		$this->star = $star;
+		$this->featured = $featured;
+		$this->category_id = $category_id;
+		$this->brand_id = $brand_id;
+	}
 
-    function getSku()
-    {
-        return $this->sku;
-    }
+	function getId() {
+		return $this->id;
+	}
 
-    function getPrice()
-    {
-        return $this->price;
-    }
+	function getName() {
+		return $this->name;
+	}
 
-    function getDiscountPercentage()
-    {
-        return $this->discount_percentage;
-    }
+	function getBarcode() {
+		return $this->barcode;
+	}
 
-    function getDiscountFromDate()
-    {
-        return $this->discount_from_date;
-    }
+	function getSku() {
+		return $this->sku;
+	}
 
-    function getDiscountToDate()
-    {
-        return $this->discount_to_date;
-    }
+	function getPrice() {
+		return $this->price;
+	}
 
-    function getSalePrice()
-    {
-        return $this->sale_price;
-    }
+	function getDiscountPercentage() {
+		return $this->discount_percentage;
+	}
 
-    function getFeaturedImage()
-    {
-        return $this->featured_image;
-    }
+	function getDiscountFromDate() {
+		return $this->discount_from_date;
+	}
 
-    function getInventoryQty()
-    {
-        return $this->inventory_qty;
-    }
+	function getDiscountToDate() {
+		return $this->discount_to_date;
+	}
 
-    function getCreatedDate()
-    {
-        return $this->created_date;
-    }
+	function getSalePrice() {
+		return $this->sale_price;
+	}
 
-    function getDescription()
-    {
-        return $this->description;
-    }
+	function getFeaturedImage() {
+		return $this->featured_image;
+	}
 
-    function getStar()
-    {
-        return $this->star;
-    }
+	function getInventoryQty() {
+		return $this->inventory_qty;
+	}
 
-    function getFeatured()
-    {
-        return $this->featured;
-    }
+	function getCreatedDate() {
+		return $this->created_date;
+	}
 
-    function getCategoryId()
-    {
-        return $this->category_id;
-    }
+	function getDescription() {
+		return $this->description;
+	}
 
-    function getBrandId()
-    {
-        return $this->brand_id;
-    }
+	function getStar() {
+		return $this->star;
+	}
 
-    function getBrand() {
+	function getFeatured() {
+		return $this->featured;
+	}
+
+	function getCategoryId() {
+		return $this->category_id;
+	}
+
+	function getBrandId() {
+		return $this->brand_id;
+	}
+
+	function setName($name) {
+		$this->name = $name;
+		return $this;
+	}
+
+	function setBarcode($barcode) {
+		$this->barcode = $barcode;
+		return $this;
+	}
+
+	function setSku($sku) {
+		$this->sku = $sku;
+		return $this;
+	}
+
+	function setPrice($price) {
+		$this->price = $price;
+		return $this;
+	}
+
+	function setDiscountPercentage($discount_percentage) {
+		$this->discount_percentage = $discount_percentage;
+		return $this;
+	}
+
+	function setDiscountFromDate($discount_from_date) {
+		$this->discount_from_date = $discount_from_date;
+		return $this;
+	}
+
+	function setDiscountToDate($discount_to_date) {
+		$this->discount_to_date = $discount_to_date;
+		return $this;
+	}
+
+	function setSalePrice($sale_price) {
+		$this->sale_price = $sale_price;
+		return $this;
+	}
+
+	function setFeaturedImage($featured_image) {
+		$this->featured_image = $featured_image;
+		return $this;
+	}
+
+	function setInventoryQty($inventory_qty) {
+		$this->inventory_qty = $inventory_qty;
+		return $this;
+	}
+
+	function setCreatedDate($created_date) {
+		$this->created_date = $created_date;
+		return $this;
+	}
+
+	function setDescription($description) {
+		$this->description = $description;
+		return $this;
+	}
+
+	function setStar($star) {
+		$this->star = $star;
+		return $this;
+	}
+
+	function setFeatured($featured) {
+		$this->featured = $featured;
+		return $this;
+	}
+
+	function setCategoryId($category_id) {
+		$this->category_id = $category_id;
+		return $this;
+	}
+
+	function setBrandId($brand_id) {
+		$this->brand_id = $brand_id;
+		return $this;
+	}
+
+	function getCategory() {
+		$categoryRepository = new CategoryRepository();
+		$category = $categoryRepository->find($this->category_id);
+		return $category;
+
+	}
+
+	function getBrand() {
 		$brandRepository = new BrandRepository();
 		$brand = $brandRepository->find($this->brand_id);
 		return $brand;
 
 	}
-    function getImageItems() {
-        $imageRepository = new ImageItemRepository();
-        $imageItems = $imageRepository->getByProductId($this->id);
-        return $imageItems;
-    }
-    
+
+	function getImageItems() {
+		$imageItemRepository = new ImageItemRepository();
+		$imageItems = $imageItemRepository->getByProductId($this->id);
+		return $imageItems;
+	}
+
+	function getComments() {
+		$commentRepository = new CommentRepository();
+		$comments = $commentRepository->getByProductId($this->id);
+		return $comments;
+	}
 }

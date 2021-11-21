@@ -107,4 +107,18 @@ class ProductController
         $categories = $categoryRepository->getAll();
         require 'view/product/show.php';
     }
+    function addComment() {
+        $data = [];
+        $data['email'] = $_POST['email'];
+        $data['fullname'] = $_POST['fullname'];
+        $data['star'] = $_POST['rating'];
+        $data['created_date'] = date('Y-m-d H:i:s');
+        $data['description'] = $_POST['description'];
+        $data['product_id'] = $_POST['product_id'];
+        $commentRepository = new CommentRepository();
+        $commentRepository->save($data);
+        $productRepository = new ProductRepository();
+        $product = $productRepository->find($_POST['product_id']);
+        require 'view/product/commentList.php';
+    }
 }

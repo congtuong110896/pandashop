@@ -4,9 +4,14 @@ define('USERNAME','root');
 define('PASSWORD','');
 define('DBNAME','pandashop');
 
+// define('SERVERNAME','localhost');
+// define('USERNAME','kfxkhbxk');
+// define('PASSWORD','d8YiXzTvBwZoqut');
+// define('DBNAME','kfxkhbxk_pandashop');
+
 // send email 
-define("SMTP_USERNAME", "tuongnguyen0896@gmail.com");
-define("SMTP_SECRET", "vyjmepjbsrhfcxdo"); // 
+define("SMTP_USERNAME", "congtuong110896@gmail.com");
+define("SMTP_SECRET", "ljyirndreeakqlcz");
 define("SMTP_HOST", "smtp.gmail.com");
 define("SHOP_OWNER", "tuongnguyen0896@gmail.com");
 
@@ -20,8 +25,8 @@ define('ITEM_PER_PAGE','10');
 define("GOOGLE_CLIENT_ID", "145751660791-q0qhvj98k14h09lcjoba51m0a3vgja1k.apps.googleusercontent.com");
 define("GOOGLE_CLIENT_SECRET", "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");
 //login facebooks
-define("FACEBOOK_CLIENT_ID", "618317682545308");
-define("FACEBOOK_CLIENT_SECRET", "66e9d5b4182fbab75a227bbd5d1745de");
+define("FACEBOOK_CLIENT_ID", "420642773034624");
+define("FACEBOOK_CLIENT_SECRET", "13ea94c16b78a63c36d517f80bd698bc");
 
 
 ?>

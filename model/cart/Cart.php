@@ -12,7 +12,7 @@ class Cart
 	}
 
 	function getItems(){
-		return $this->items; 
+		return $this->items;
 	}
 
 	function getTotalPrice(){

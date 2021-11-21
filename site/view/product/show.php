@@ -76,7 +76,7 @@
 
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="product-comment">
-                                    <form class="form-comment" action="" method="POST" role="form">
+                                    <form class="form-comment" action="?c=product&a=addComment" method="POST" role="form">
                                         <label>Đánh giá của bạn</label>
                                         <div class="form-group">
                                             <input type="hidden" name="product_id" value="3">
